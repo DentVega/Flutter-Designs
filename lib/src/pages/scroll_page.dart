@@ -20,12 +20,6 @@ class ScrollPage extends StatelessWidget {
     );
   }
 
-  Widget _pagina2() {
-    return Center(
-      child: Text('Pagina 2'),
-    );
-  }
-
   Widget _colorFondo() {
     return Container(
       width: double.infinity,
@@ -38,7 +32,10 @@ class ScrollPage extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      child: Image(image: AssetImage('assets/scroll-1.png'), fit: BoxFit.cover,),
+      child: Image(
+        image: AssetImage('assets/scroll-1.png'),
+        fit: BoxFit.cover,
+      ),
     );
   }
 
@@ -47,12 +44,47 @@ class ScrollPage extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: <Widget>[
-          SizedBox(height: 20.0,),
-          Text('11 º', style: estiloTexto,),
-          Text('Miércoles ', style: estiloTexto,),
+          SizedBox(
+            height: 20.0,
+          ),
+          Text(
+            '11 º',
+            style: estiloTexto,
+          ),
+          Text(
+            'Miércoles ',
+            style: estiloTexto,
+          ),
           Expanded(child: Container()),
-          Icon(Icons.keyboard_arrow_down, size: 70.0, color: Colors.white,)
+          Icon(
+            Icons.keyboard_arrow_down,
+            size: 70.0,
+            color: Colors.white,
+          )
         ],
+      ),
+    );
+  }
+
+  Widget _pagina2() {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Color.fromRGBO(108, 192, 218, 1.0),
+      child: Center(
+        child: RaisedButton(
+          onPressed: () {},
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+            child: Text(
+              'Bienvenidos',
+              style: TextStyle(fontSize: 20.0),
+            ),
+          ),
+          color: Colors.blue,
+          textColor: Colors.white,
+          shape: StadiumBorder(),
+        ),
       ),
     );
   }
