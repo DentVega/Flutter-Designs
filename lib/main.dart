@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_designs/src/pages/basico_page.dart';
 import 'package:flutter_designs/src/pages/botones_page.dart';
 import 'package:flutter_designs/src/pages/scroll_page.dart';
+import 'package:flutter_designs/src/pages/tangible_Bank_home_page.dart';
+import 'package:flutter_designs/src/pages/tangible_bank_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,11 +18,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Diseños',
-      initialRoute: 'scroll',
+      initialRoute: 'tangiblebank',
       routes: {
         'basico': (BuildContext context) => BasicoPage(),
         'scroll': (BuildContext context) => ScrollPage(),
-        'botones': (BuildContext context) => BotonesPage()
+        'botones': (BuildContext context) => BotonesPage(),
+        'tangiblebank': (BuildContext context) => TangibleBank(),
+        'tangibleBankHome': (BuildContext context) => TangibleBankHome()
       },
     );
   }
