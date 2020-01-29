@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_designs/src/pages/basico_page.dart';
 import 'package:flutter_designs/src/pages/botones_page.dart';
+import 'package:flutter_designs/src/pages/expenses_page.dart';
 import 'package:flutter_designs/src/pages/scroll_page.dart';
 import 'package:flutter_designs/src/pages/tangible_Bank_home_page.dart';
 import 'package:flutter_designs/src/pages/tangible_bank_page.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         'scroll': (BuildContext context) => ScrollPage(),
         'botones': (BuildContext context) => BotonesPage(),
         'tangiblebank': (BuildContext context) => TangibleBank(),
-        'tangibleBankHome': (BuildContext context) => TangibleBankHome()
+        'tangibleBankHome': (BuildContext context) => TangibleBankHome(),
+        'expensesPage': (BuildContext context) => ExpensesPage()
       },
     );
   }
