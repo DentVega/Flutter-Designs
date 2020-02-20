@@ -11,14 +11,17 @@ class _TangibleBankHomeState extends State<TangibleBankHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[_createBackground(), _createForm(context)],
+      body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[_createBackground(), _createForm(context)],
+        ),
       ),
     );
   }
 
   Widget _createBackground() {
     return Container(
+      width: double.infinity,
       child: SvgPicture.asset(
         'assets/screen_two.svg',
         fit: BoxFit.cover,

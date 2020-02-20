@@ -8,6 +8,7 @@ class TangibleBank extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
+            width: double.infinity,
             child: SvgPicture.asset(
               'assets/screen_prime.svg',
               fit: BoxFit.cover,
@@ -21,15 +22,18 @@ class TangibleBank extends StatelessWidget {
 
   Widget _createButton(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: <Widget>[
-          Expanded(child: Container()),
-          _createTitle(),
-          SizedBox(
-            height: 40.0,
-          ),
-         _bottomWidget(context),
-        ],
+      child: Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Expanded(child: Container()),
+            _createTitle(),
+            SizedBox(
+              height: 40.0,
+            ),
+           _bottomWidget(context),
+          ],
+        ),
       ),
     );
   }
@@ -68,7 +72,7 @@ class TangibleBank extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18),
+                      fontSize: 16),
                 ),
                 SizedBox(
                   width: 40,
